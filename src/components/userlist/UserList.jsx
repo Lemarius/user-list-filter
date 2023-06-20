@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { USERS } from '../../constants/users';
 import {
 	StyledActive,
@@ -21,6 +21,8 @@ import {
 } from './styles';
 
 const UserList = () => {
+	const navigate = useNavigate();
+
 	return (
 		<StyledContainer>
 			<StyledH1>Listado de usuarios</StyledH1>
@@ -48,8 +50,8 @@ const UserList = () => {
 						<StyledActive active={user.active}>
 							{user.active ? 'Activo' : 'Inactivo'}
 						</StyledActive>
-						<StyledButton>
-							<Link to={`/user/${user.userId}`}>Ver Detalles</Link>
+						<StyledButton onClick={() => navigate(`/user/${user.userId}`)}>
+							Ver Detalles
 						</StyledButton>
 					</StyledDetailsCont>
 				</StyledInfoCont>

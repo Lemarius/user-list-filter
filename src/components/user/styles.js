@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 const StyledButton = styled.button`
     padding: 3px;
+    margin: 20px 0;
 `;
 
 const StyledImg = styled.img`

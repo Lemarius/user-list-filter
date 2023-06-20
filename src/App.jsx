@@ -1,5 +1,4 @@
 import { BrowserRouter } from 'react-router-dom';
-import UserList from './components/userlist/UserList';
 import { GlobalStyles } from './styles/globalStyles';
 import Router from './router/Router';
 
@@ -8,7 +7,6 @@ const App = () => {
 		<>
 			<BrowserRouter>
 				<GlobalStyles />
-				<UserList />
 				<Router />
 			</BrowserRouter>
 		</>
